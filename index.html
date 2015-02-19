@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+    <link rel="stylesheet" href="CodeMirror/lib/codemirror.css">
+    <script src="CodeMirror/lib/codemirror.js"></script>
+    <script src="CodeMirror/mode/javascript/javascript.js"></script>
+    <script src="eventemitter.js"></script>
+    <script src="fluid.js"></script>
+    <style>
+      html {
+        width: 100%;
+        height: 100%;
+      }
+      fluid-con-msg {
+        display: block;
+        color: darkgray;
+        margin-left: 2em;
+      }
+
+      fluid-con-msg:before {
+        content: '  \2192  ';
+      }
+
+      body {
+        width: 100%;
+        height: 100%;
+      }
+
+      fluid-editor {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+
+      .CodeMirror {
+        height: auto;
+      }
+    </style>
+  <head>
+  </head>
+  <body>
+    <fluid-editor id="fluid">
+    </fluid-editor>
+  </body>
+</html>
