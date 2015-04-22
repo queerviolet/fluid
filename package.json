@@ -1,0 +1,19 @@
+{
+  "name": "fluid",
+  "version": "1.0.0",
+  "description": "Fluid UI Tools",
+  "main": "fluid.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/queerviolet/fluid.git"
+  },
+  "author": "Ashi Krishnan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/queerviolet/fluid/issues"
+  },
+  "homepage": "https://github.com/queerviolet/fluid"
+}
