@@ -1,5 +1,6 @@
 "use strict";
 
+var StackTrace = require('stack-trace');
 var facade = require('./eventfacade.js');
 
 var editor = Object.create(HTMLElement.prototype);
@@ -72,16 +73,16 @@ editor.clear = function() {
   this.widgets = {};    
 };
 
-var stackRe = /<anonymous>:(\d+):(\d+)/;
-var getEvalPos = function() {
-  // at fluid-editor.eval (eval at <anonymous> (file:///Users/ashi/fluid/fluid.js:19:10), <anonymous>:1:9)
-  var st = new Error().stack;
-  var match = st.match(stackRe);
-  if (match) {
-    return {
-      line: match[1],
-      ch: match[2],
-    };
+function getEvalPos() {
+  var st = StackTrace.get();
+  console.log('stack trace:', st);
+  for (var i = 0; i != st.length; ++i) {
+    if (st[i].isEval()) {
+      return {
+        line: st[i].getLineNumber(),
+        ch: st[i].getColumnNumber()
+      };
+    }
   }
   return null;
 };

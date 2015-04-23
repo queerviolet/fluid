@@ -1,6 +1,6 @@
 {
   "name": "fluid",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Fluid UI Tools",
   "main": "fluid.js",
   "scripts": {
@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/queerviolet/fluid/issues"
   },
-  "homepage": "https://github.com/queerviolet/fluid"
+  "homepage": "https://github.com/queerviolet/fluid",
+  "dependencies": {
+    "stack-trace": "0.0.9"
+  }
 }

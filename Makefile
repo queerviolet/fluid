@@ -1,5 +1,10 @@
-all: prep standalone.js
+all: prep dist debug
+
+dist: standalone.js
 	browserify standalone.js --standalone fluid > dist/fluid.js
+
+debug: standalone.js
+	browserify -d standalone.js --standalone fluid > dist/fluid-debug.js
 
 clean:
 	rm -rf dist
@@ -7,4 +12,4 @@ clean:
 prep:
 	mkdir -p dist
 
-.PHONY: all clean prep
+.PHONY: all dist clean prep
