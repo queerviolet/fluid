@@ -1,0 +1,22 @@
+@import url("../CodeMirror/lib/codemirror.css");
+
+fluid-con-msg {
+  display: block;
+  color: black;
+  padding: 5px;
+  padding-left: 9px;
+  background: #7ef;
+}
+
+fluid-con-msg.error {
+  background: fuchsia;
+}
+
+fluid-editor {
+  display: block;
+}
+
+fluid-editor .CodeMirror {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+}

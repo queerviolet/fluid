@@ -1,7 +1,11 @@
 "use strict";
 
+require('codemirror/mode/javascript/javascript');
+var CodeMirror = require('codemirror/lib/codemirror');
 var StackTrace = require('stack-trace');
 var facade = require('./eventfacade.js');
+
+var css = require('./editor.css');
 
 var editor = Object.create(HTMLElement.prototype);
 
@@ -10,9 +14,11 @@ editor.createdCallback = function() {
   this.error = this.msg.bind(this, 'error');
 
   var self = this;
+
   this.cm = CodeMirror(this, {
     mode: 'javascript',
     gutters: ['console'],
+    lineNumbers: true,
     extraKeys: {
       'Ctrl-Enter': function() {
         self.run();

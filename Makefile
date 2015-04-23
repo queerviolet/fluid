@@ -1,10 +1,12 @@
+BROWSERIFY=browserify -t browserify-css
+
 all: prep dist debug
 
 dist: standalone.js
-	browserify standalone.js --standalone fluid > dist/fluid.js
+	$(BROWSERIFY) standalone.js --standalone fluid > dist/fluid.js
 
 debug: standalone.js
-	browserify -d standalone.js --standalone fluid > dist/fluid-debug.js
+	$(BROWSERIFY) -d standalone.js --standalone fluid > dist/fluid-debug.js
 
 clean:
 	rm -rf dist
