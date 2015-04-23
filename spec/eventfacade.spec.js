@@ -1,5 +1,7 @@
 "use strict";
 
+var EventFacade = require('../src/eventfacade.js');
+
 describe('an EventFacade', function() {
   var original = {
     yell: function() { },
