@@ -1,9 +1,6 @@
-var EventFacade = require('./eventfacade.js');
-
-global.window.EventFacade = EventFacade;
-global.window.StackTrace = require('stack-trace');
+var EventFacade = require('./src/eventfacade.js');
 
 global.window.Fluid = {
   EventFacade: EventFacade,
-  Editor: require('./editor.js'),
+  Editor: require('./src/editor.js'),
 };

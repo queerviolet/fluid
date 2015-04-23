@@ -20,7 +20,6 @@ editor.createdCallback = function() {
     },
   });
 
-  this.cm.setValue("console.log('hello world');");
   this.console = facade(window.console);
   this.console.on('log', this.log);
   this.console.on('error', this.error);
@@ -75,7 +74,6 @@ editor.clear = function() {
 
 function getEvalPos() {
   var st = StackTrace.get();
-  console.log('stack trace:', st);
   for (var i = 0; i != st.length; ++i) {
     if (st[i].isEval()) {
       return {
